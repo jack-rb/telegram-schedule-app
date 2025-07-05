@@ -15,7 +15,7 @@ async def cmd_start(message: types.Message):
         reply_markup=InlineKeyboardMarkup(inline_keyboard=[[
             InlineKeyboardButton(
                 text="📚 Открыть расписание",
-                web_app=WebAppInfo(url="http://localhost:8000")
+                web_app=WebAppInfo(url="https://telegram-schedule-app.onrender.com")
             )
         ]])
     )
