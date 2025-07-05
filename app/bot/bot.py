@@ -1,11 +1,11 @@
 from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
-from ..core.config import settings
+import os
 
 # Инициализация бота
 bot = Bot(
-    token=settings.BOT_TOKEN, 
+    token=os.getenv('BOT_TOKEN', 'your_bot_token_here'), 
     default=DefaultBotProperties(parse_mode=ParseMode.HTML)
 )
 dp = Dispatcher()
